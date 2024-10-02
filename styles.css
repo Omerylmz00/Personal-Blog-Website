@@ -29,6 +29,7 @@ nav {
     text-align: center;
     display: flex;               /* Flexbox kullanarak öğeleri hizalıyoruz */
     justify-content: space-between; /* Sağ ve sol arasında boşluk bırakıyoruz */
+    flex-wrap: wrap;            /* Öğelerin taşmasını önlemek için */
 }
 
 nav a {
@@ -95,8 +96,9 @@ nav a:hover {
 
 /* Profil fotoğrafı stili */
 .profile-photo {
-    width: 150px;                              /* Fotoğraf genişliği */
-    height: 150px;                             /* Fotoğraf yüksekliği */
+    width: 100%;                                /* Genişlik %100 olarak ayarlandı */
+    max-width: 150px;                          /* Maksimum genişlik 150px */
+    height: auto;                              /* Yükseklik otomatik ayarlandı */
     border-radius: 20px;                       /* Kavisli kenar yapma (daha fazla kavis için artırabilirsiniz) */
     margin-right: 20px;                        /* Yazı ile fotoğraf arasında boşluk */
     border: 3px solid #000000;                 /* Çerçeve rengi ve kalınlığı */
@@ -161,9 +163,13 @@ main {
 
 /* Responsive Tasarım (Ekran genişliği küçüldüğünde) */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;                /* Navigasyon çubuğunu dikey hizala */
+        align-items: center;                   /* Merkezde hizalama */
+    }
+
     nav a {
-        display: block;
-        margin: 10px 0;
+        margin: 10px 0;                       /* Linkler arasında dikey boşluk */
     }
 
     section {
@@ -181,7 +187,8 @@ main {
     }
 
     .container {
-        width: 100%;                            /* Küçük ekranlarda tam genişlik */
+        width: 95%;                            /* Küçük ekranlarda daha geniş */
+        padding: 0 10px;                      /* Kenar boşlukları */
     }
 
     .card {
