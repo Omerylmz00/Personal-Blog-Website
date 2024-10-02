@@ -161,8 +161,36 @@ main {
     flex-direction: column;
 }
 
+video {
+    width: 100%;         /* Videonun genişliğini %100 yaparak alanı doldurmasını sağlıyoruz */
+    height: auto;       /* Yüksekliği otomatik ayarlıyoruz, böylece oran korunur */
+    max-width: 600px;   /* Videonun maksimum genişliğini ayarlayın */
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 oranı için */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* Responsive Tasarım (Ekran genişliği küçüldüğünde) */
 @media (max-width: 768px) {
+
+    video {
+        max-width: 100%;    /* Mobilde maksimum genişliği %100 yap */
+    }
+
     nav {
         flex-direction: column;                /* Navigasyon çubuğunu dikey hizala */
         align-items: center;                   /* Merkezde hizalama */
