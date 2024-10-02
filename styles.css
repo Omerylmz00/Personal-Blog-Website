@@ -1,0 +1,190 @@
+/* Body stili ve arka plan resmi */
+body {
+    background-image: url('images/background_image.jpg');  /* Arka plan görselinin yolu */
+    background-size: cover;                    /* Arka planın ekranı tam kaplamasını sağlıyoruz */
+    background-position: center;               /* Görseli ortalıyoruz */
+    background-attachment: fixed;              /* Arka plan sabit kalacak */
+    background-repeat: no-repeat;              /* Tekrar etmemesi sağlanıyor */
+    color: #e0e0e0;                            /* Metin rengini açık yaparak kontrastı artırıyoruz */
+    font-family: Arial, sans-serif;            /* Temel font ailesi */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header stili */
+header {
+    background-color: #1f1f1f;  /* Koyu arka plan rengi */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;              /* Başlık rengi beyaz */
+}
+
+/* Navigation bar stili */
+nav {
+    background-color: #333;      /* Koyu renkli arka plan */
+    padding: 10px;
+    text-align: center;
+    display: flex;               /* Flexbox kullanarak öğeleri hizalıyoruz */
+    justify-content: space-between; /* Sağ ve sol arasında boşluk bırakıyoruz */
+}
+
+nav a {
+    color: #e0e0e0;              /* Linklerin açık renkli görünmesi */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;          /* Pozisyonu relative yaparak kaydırma efekti için zemin oluşturuyoruz */
+}
+
+nav a:hover {
+    color: #e0e0e0;              /* Üzerine gelince linklerin beyaz renkte kalmasını sağlıyoruz */
+    text-decoration: underline;  /* Üzerine gelindiğinde altı çizili olacak */
+}
+
+/* Emoji hareket stili */
+.emoji {
+    display: inline-block;                      /* Emoji için inline-block yapısı */
+    animation: move 1s ease-in-out infinite;  /* Animasyonu tanımlıyoruz */
+}
+
+/* Emoji hareket animasyonu */
+@keyframes move {
+    0% {
+        transform: translateY(0);              /* Başlangıç konumu */
+    }
+    50% {
+        transform: translateY(-5px);            /* Yükseklik değişimi */
+    }
+    100% {
+        transform: translateY(0);                /* Son konum */
+    }
+}
+
+/* Sosyal ikonların stili */
+.social-icons {
+    display: flex;               /* Flexbox ile yatay düzende yerleştiriyoruz */
+}
+
+.icon-link {
+    color: #e0e0e0;              /* İkonların rengi */
+    margin-left: 10px;          /* İkonlar arasında boşluk bırakıyoruz */
+    font-size: 20px;            /* İkon boyutu */
+}
+
+.icon-link:hover {
+    color: #000000;             /* Üzerine gelindiğinde ikonların mor rengi alması */
+}
+
+/* Ana içerik stili */
+.container {
+    display: flex;                              /* Flexbox kullanarak düzenleme yapıyoruz */
+    flex-direction: column;                     /* Dikey düzen */
+    align-items: center;                        /* Merkezde hizalama */
+}
+
+/* Profil fotoğrafı ve yazının yerleştirileceği stil */
+.profile-section {
+    display: flex;                             /* Flexbox kullanarak yan yana hizalıyoruz */
+    align-items: center;                       /* Dikey olarak merkezde hizalama */
+    width: 80%;                                /* Genişlik ayarı */
+    margin: 20px;                              /* Üstte ve altta boşluk bırak */
+}
+
+/* Profil fotoğrafı stili */
+.profile-photo {
+    width: 150px;                              /* Fotoğraf genişliği */
+    height: 150px;                             /* Fotoğraf yüksekliği */
+    border-radius: 20px;                       /* Kavisli kenar yapma (daha fazla kavis için artırabilirsiniz) */
+    margin-right: 20px;                        /* Yazı ile fotoğraf arasında boşluk */
+    border: 3px solid #000000;                 /* Çerçeve rengi ve kalınlığı */
+}
+
+.card {
+    background-color: rgba(31, 31, 31, 0.8);    /* Yarı saydam arka plan rengi */
+    border-radius: 15px;                        /* Yuvarlak köşeler */
+    padding: 20px;
+    margin: 20px;
+    width: 80%;                                 /* Kartların genişliği */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Gölgeler ekleniyor */
+}
+
+/* Hakkımda, Projeler ve İletişim bölümleri için yönlendirme */
+.card:nth-child(odd) {
+    align-self: flex-start;                     /* Tekil kartları sola hizala */
+}
+
+.card:nth-child(even) {
+    align-self: flex-end;                       /* Çift kartları sağa hizala */
+}
+
+/* Buton stili */
+button {
+    background-color: #bb86fc;                 /* Butonun arka plan rengi */
+    border: none;
+    color: white;                              /* Buton yazı rengi beyaz yapıldı */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;                 /* Animasyon için geçiş ekliyoruz */
+}
+
+button:hover {
+    background-color: transparent;              /* Üzerine gelindiğinde arka planı şeffaf yapıyoruz */
+    color: white;                               /* Üzerine gelindiğinde yazı rengi beyaz kalacak */
+    text-decoration: underline;                 /* Altı çizili yapıyoruz */
+}
+
+/* Footer stili */
+footer {
+    background-color: #1f1f1f;                 /* Koyu arka plan rengi */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: #888;                               /* Footer'daki metin rengi */
+    position: relative;                        /* Footer'ı sayfanın en altında sabitliyoruz */
+    bottom: 0;                                 /* Footer'ı en alta yerleştiriyoruz */
+}
+
+/* Ana içerik stili - içerik yeterli değilse footer'ın aşağıda kalmasını sağlamak için */
+main {
+    min-height: calc(100vh - 60px);           /* Sayfanın yüksekliği footer yüksekliğini çıkartarak ayarlanıyor */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Tasarım (Ekran genişliği küçüldüğünde) */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .profile-section {
+        flex-direction: column;                 /* Küçük ekranlarda dikey düzen */
+        align-items: center;                    /* Merkezde hizalama */
+    }
+
+    .profile-photo {
+        margin-bottom: 15px;                   /* Fotoğrafın altında boşluk bırak */
+        margin-right: 0;                        /* Sağdaki boşluğu kaldır */
+    }
+
+    .container {
+        width: 100%;                            /* Küçük ekranlarda tam genişlik */
+    }
+
+    .card {
+        width: 90%;                             /* Kartların genişliği */
+    }
+}
