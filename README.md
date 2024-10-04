@@ -10,6 +10,7 @@ The blog allows users to get in touch with the blog owner, see his projects and 
 - knowledge about the person
 - Access to social media addresses
 - Video integration
+- Access to Instagram, Github and LinkedIn on the navigation bar
 
 ## Requirements
 - A modern web browser (Chrome, Firefox, Edge)
